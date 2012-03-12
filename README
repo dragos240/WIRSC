@@ -1,0 +1,24 @@
+WIRSC - A woefully inefficient runescape client
+-----
+
+What is it?
+-----------
+WIRSC is a runescape client that as of now, is VERY inefficient, yet simple. I need to work on it more, but they'll be no promises that this will be updated frequently, if at all. In essence, you start the script and it starts a runescape applet without the lag and memory usage that a normal browser will use up. Just runescape, plain and simple.
+
+How does it work?
+-----------------
+RuneScape is a java-based MMORPG. Its client uses java parametres that are calculated every single time you load the game. Some values are static (unchanging) and some dynamic (changing). Both of these values are taken from the game page, downloaded and parsed, they are then transfered to the java source file and compiled. This entire process can be done in java, however, I know so little java, I couldn't do that. WIRSC is inefficient because it is largely dependent on a single shell script and a little java. To elaborate, if this was created in java, it could generate all this data every time without the need to continuously recompile the source. This also means that this will work for just a few, unix-like operating systems that have the commands and libraries to run the programs. I've used mostly programs that are found in today's operating systems, with the exception of zenity, which asks for a facebook login. I've confirmed this to work properly, but even this is very ineffcient. You need to use your browser to browse to the main page, click on the facebook icon, then copy the "key" field in the page's source. As I said, it works, but is a waste of time really. If you don't have zenity, you can comment out those lines and edit the code a bit to get it to work.
+
+Can I give you money?
+--------------------
+No
+
+Can I bare your children?
+-------------------------
+No
+
+Can you give me a fixed-rate mortgage?
+--------------------------------------
+Nien
+
+* German for 'No'

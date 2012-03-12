@@ -1,0 +1,24 @@
+import java.applet.Applet;
+import java.applet.AppletContext;
+import java.applet.AppletStub;
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.HashMap;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+
+public class RSLoader extends JFrame
+  implements AppletStub
+{
+  private static final HashMap<String, String> parameters = new HashMap();
+
+  public RSLoader() {
+    try {
+      setResizable(true);
+      setTitle("RSClient - Dragos240 (Based on GrimJava's RunescapeClient");
+      setVisible(true);
+      parameters.put("28", "FACEBOOKLOGIN");

@@ -1,0 +1,53 @@
+
+
+      URLClassLoader localURLClassLoader = new URLClassLoader(new URL[] { new URL("http://WORLDURLHERE.runescape.com/JARFILENAMEHERE") });
+
+      Applet localApplet = (Applet)localURLClassLoader.loadClass("Rs2Applet").newInstance();
+      localApplet.setStub(this);
+      localApplet.init();
+      localApplet.start();
+
+      JPanel localJPanel = new JPanel(new BorderLayout());
+      localJPanel.setPreferredSize(new Dimension(768, 560));
+      setPreferredSize(new Dimension(768, 658));
+      localJPanel.add(localApplet);
+      getContentPane().add(localApplet, "Center");
+      setDefaultCloseOperation(3);
+      setSize(769, 538);
+    } catch (Exception localException) {
+      localException.printStackTrace();
+    }
+  }
+
+  public void appletResize(int paramInt1, int paramInt2)
+  {
+  }
+
+  public final URL getCodeBase() {
+    try {
+      return new URL("http://WORLDURLHERE.runescape.com/"); } catch (Exception localException) {
+    }
+    return null;
+  }
+
+  public final URL getDocumentBase()
+  {
+    try {
+      return new URL("http://WORLDURLHERE.runescape.com/"); } catch (Exception localException) {
+    }
+    return null;
+  }
+  public final String getParameter(String paramString)
+  {
+    return (String)parameters.get(paramString);
+  }
+
+  public final AppletContext getAppletContext() {
+    return null;
+  }
+
+  public static void main(String[] paramArrayOfString) {
+    new RSLoader().setVisible(true);
+  }
+}
+
