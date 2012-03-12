@@ -20,7 +20,8 @@ else
 fi
 cd ..
 rm -r ./tmp/*
-cd src
-javac RSLoader.java
+javac -d ../bin ./src/RSLoader.java
+cd bin
 java RSLoader
 cd ..
+rm -r ./src/*
